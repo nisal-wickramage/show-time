@@ -24,3 +24,14 @@ REST endpoints
 * `/movies/{movie-id}/showtimes/{showtime-id}/reservations` POST
 * `/movies/{movie-id}/showtimes/{showtime-id}/reservations/{reservation-id}` POST
 
+
+## API setup
+
+create spring boot starter
+https://start.spring.io/
+
+REST Guide
+https://spring.io/guides/gs/accessing-data-rest/
+
+Testing Guide
+https://spring.io/guides/gs/testing-web/
