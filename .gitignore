@@ -83,3 +83,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+**/.gradle/
+api/build/**
