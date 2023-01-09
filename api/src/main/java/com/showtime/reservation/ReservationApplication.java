@@ -2,6 +2,9 @@ package com.showtime.reservation;
 
 import com.showtime.reservation.movie.Movie;
 import com.showtime.reservation.movie.MovieRepository;
+import com.showtime.reservation.reservation.Reservation;
+import com.showtime.reservation.reservation.ReservationRepository;
+import com.showtime.reservation.reservation.SeatReservation;
 import com.showtime.reservation.show.Show;
 import com.showtime.reservation.show.ShowRepository;
 import com.showtime.reservation.theatre.Seat;
@@ -50,15 +53,29 @@ public class ReservationApplication {
 //		};
 //	}
 
-	@Bean
-	public CommandLineRunner demo(TheatreRepository repository) {
-		return (args) -> {
-			Set<Seat> seats = new HashSet<>();
-			seats.add(new Seat(1,1));
-			seats.add(new Seat(1,2));
-			Theatre theatre = new Theatre("IMAX-01", "IMAX-01", seats);
+//
 
-			repository.save(theatre);
-		};
-	}
+//	@Bean
+//	public CommandLineRunner demo(TheatreRepository repository) {
+//		return (args) -> {
+//			Set<Seat> seats = new HashSet<>();
+//			seats.add(new Seat('A',1));
+//			seats.add(new Seat('A',2));
+//			Theatre theatre = new Theatre("IMAX-01", "IMAX-01", seats);
+//
+//			repository.save(theatre);
+//		};
+//	}
+
+//	@Bean
+//	public CommandLineRunner demo(ReservationRepository repository) {
+//		return (args) -> {
+//			Set<SeatReservation> seats = new HashSet<>();
+//			seats.add(new SeatReservation('A',1));
+//			seats.add(new SeatReservation('A',2));
+//			Reservation reservation = new Reservation("Nisal", "nnnnnnuw@gmail.com",1, seats);
+//
+//			repository.save(reservation);
+//		};
+//	}
 }

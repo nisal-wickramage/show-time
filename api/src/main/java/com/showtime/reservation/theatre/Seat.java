@@ -2,15 +2,14 @@ package com.showtime.reservation.theatre;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class Seat {
     protected Seat(){}
 
-    public Seat(int rowNumber, int columnNumber) {
-        this.rowNumber = rowNumber;
-        this.columnNumber = columnNumber;
+    public Seat(char rowId, int columnId) {
+        this.rowId = rowId;
+        this.columnId = columnId;
     }
 
     @Id
@@ -18,10 +17,10 @@ public class Seat {
     private long id;
 
     @Getter
-    private int rowNumber;
+    private char rowId;
 
     @Getter
-    private int columnNumber;
+    private int columnId;
 
     @ManyToOne( fetch = FetchType.LAZY)
     @JoinColumn(name="theatre_id")
