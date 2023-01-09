@@ -2,7 +2,6 @@ package com.showtime.reservation.reservation;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 public class SeatReservation {
