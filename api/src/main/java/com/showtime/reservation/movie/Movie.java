@@ -8,7 +8,7 @@ import lombok.Getter;
 
 @Entity
 public class Movie {
-    public Movie() {}
+    protected Movie() {}
 
     public Movie(String title, String description, String code, String runtime, String posterUrl) {
         this.title = title;
@@ -20,6 +20,7 @@ public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter
     private long id;
 
 
