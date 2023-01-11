@@ -29,12 +29,7 @@ public class MovieControllerTest {
     public void shouldReturn204WhenNoMoviesAreFound() throws Exception {
 //        this.mockMvc.perform(get("/movies")).andExpect(status().isNoContent())
 //                .andExpect(content().string(containsString("Hello, Mock")));
-        when(movieRepository.findAll()).thenReturn(new Iterable<Movie>() {
-            @Override
-            public Iterator<Movie> iterator() {
-                return Collections.emptyIterator();
-            }
-        });
+        when(movieRepository.findAll()).thenReturn(new ArrayList<Movie>());
         this.mockMvc.perform(get("/movies")).andExpect(status().isNoContent());
     }
 
@@ -42,12 +37,7 @@ public class MovieControllerTest {
     public void shouldReturn200AndListOfMoviesWhenFound() throws Exception {
         List<Movie> movies = new ArrayList<>();
         movies.add(new Movie("Avengers", "Infinity War", "INF", "2:30:30", "https://localhost"));
-        when(movieRepository.findAll()).thenReturn(new Iterable<Movie>() {
-            @Override
-            public Iterator<Movie> iterator() {
-                return movies.iterator();
-            }
-        });
+        when(movieRepository.findAll()).thenReturn(movies);
         this.mockMvc.perform(get("/movies")).andExpect(status().isOk());
     }
 }

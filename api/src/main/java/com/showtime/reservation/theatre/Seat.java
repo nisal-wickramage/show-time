@@ -2,6 +2,7 @@ package com.showtime.reservation.theatre;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 public class Seat {
@@ -22,11 +23,8 @@ public class Seat {
     @Getter
     private int columnId;
 
+    @Setter
     @ManyToOne( fetch = FetchType.LAZY)
     @JoinColumn(name="theatre_id")
     private Theatre theatre;
-
-    public void setTheatre(Theatre theatre) {
-        this.theatre = theatre;
-    }
 }
