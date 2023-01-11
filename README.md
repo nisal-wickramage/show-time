@@ -35,3 +35,7 @@ https://spring.io/guides/gs/accessing-data-rest/
 
 Testing Guide
 https://spring.io/guides/gs/testing-web/
+
+JSON Path for validating WebMvcTest results
+https://assertible.com/docs/guide/json-path
+
