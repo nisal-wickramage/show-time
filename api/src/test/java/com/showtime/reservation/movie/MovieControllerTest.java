@@ -28,8 +28,6 @@ public class MovieControllerTest {
 
     @Test
     public void shouldReturn204WhenNoMoviesAreFound() throws Exception {
-//        this.mockMvc.perform(get("/movies")).andExpect(status().isNoContent())
-//                .andExpect(content().string(containsString("Hello, Mock")));
         when(movieRepository.findAll()).thenReturn(new ArrayList<Movie>());
         this.mockMvc.perform(get("/movies")).andExpect(status().isNoContent());
     }
