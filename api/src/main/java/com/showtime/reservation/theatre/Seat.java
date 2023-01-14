@@ -24,7 +24,7 @@ public class Seat {
     private int columnId;
 
     @Setter
-    @ManyToOne( fetch = FetchType.LAZY)
+    @ManyToOne( fetch = FetchType.EAGER)
     @JoinColumn(name="theatre_id")
     private Theatre theatre;
 }
