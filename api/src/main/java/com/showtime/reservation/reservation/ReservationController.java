@@ -3,9 +3,7 @@ package com.showtime.reservation.reservation;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,8 +13,13 @@ public class ReservationController {
 
     private final ReservationRepository _reservationRepository;
 
-    public ReservationController(ReservationRepository reservationRepository) {
+    private final ReservationService _reservationService;
+
+    public ReservationController(
+            ReservationRepository reservationRepository,
+            ReservationService reservationService) {
         this._reservationRepository = reservationRepository;
+        this._reservationService = reservationService;
     }
 
     @GetMapping("/shows/{showId}/reservations")
@@ -35,5 +38,15 @@ public class ReservationController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(reservation.get(), HttpStatus.OK);
+    }
+
+    @PostMapping("/shows/{showId}/reservations")
+    public ResponseEntity<Reservation> Create(@PathVariable("showId")long showId, @RequestBody Reservation reservationRequest) throws ReservationException {
+        try {
+            Reservation reservation = _reservationService.create(reservationRequest);
+            return new ResponseEntity<>(reservation, HttpStatus.CREATED);
+        } catch (ReservationException exception) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
 }
