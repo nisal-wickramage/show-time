@@ -1,5 +1,9 @@
 package com.showtime.reservation.reservation;
-import org.springframework.data.repository.CrudRepository;
 
-public interface ReservationRepository  extends CrudRepository<Reservation, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ReservationRepository  extends JpaRepository<Reservation, Long> {
+    List<Reservation> findByShowId(long showId);
 }
