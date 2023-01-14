@@ -144,7 +144,7 @@ public class ReservationControllerTest {
         seats.add(new SeatReservation('A', 1));
         Reservation reservation = new Reservation("John", "test@test.com", 1, seats);
 
-        when(reservationService.create(any())).thenThrow(new ReservationException(ReservationExceptionMessages.seatsAlreadyBooked));
+        when(reservationService.create(any())).thenThrow(new ReservationException(ReservationExceptionMessages.seatsAlreadyReserved));
 
         ResultActions result = this.mockMvc.perform(post("/shows/1/reservations")
                 .contentType(MediaType.APPLICATION_JSON)

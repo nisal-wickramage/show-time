@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Entity
 public class SeatReservation {
     protected SeatReservation(){}
@@ -11,6 +13,19 @@ public class SeatReservation {
     public SeatReservation(char rowId, int columnId) {
         this.rowId = rowId;
         this.columnId = columnId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SeatReservation that = (SeatReservation) o;
+        return rowId == that.rowId && columnId == that.columnId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(rowId, columnId);
     }
 
     @Id
