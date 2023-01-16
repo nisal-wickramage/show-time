@@ -1,7 +1,7 @@
 <template>
   <div>
     <img src="../assets/logo.svg">
-    <h2>Movie Name</h2>
+    <h2 data-test-id="movie-title">Movie Name</h2>
     <span>
       <p>Description</p>
       <p>Runtime</p>
