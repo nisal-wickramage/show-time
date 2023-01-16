@@ -8,6 +8,17 @@ import "./assets/main.css";
 import PaymentInformation from "@/reservation/PaymentInformation.vue";
 import ReservationConfirmation from "@/reservation/ReservationConfirmation.vue";
 
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+    components,
+    directives,
+})
+
 const routes = [
     { path: '/', component: MovieCarousel },
     { path: '/reserve/:movieId', component: TicketReservation },
@@ -22,4 +33,5 @@ const router = VueRouter.createRouter({
 
 const app = createApp(App);
 app.use(router)
+app.use(vuetify)
 app.mount("#app");

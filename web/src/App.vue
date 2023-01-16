@@ -1,6 +1,8 @@
 <template>
   <main>
-    <router-view></router-view>
+    <v-badge>
+      <v-icon icon="mdi-vuetify" size="x-large"></v-icon>
+    </v-badge>
   </main>
 </template>
 
