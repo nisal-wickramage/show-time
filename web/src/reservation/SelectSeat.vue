@@ -7,21 +7,21 @@
       <td></td>
     </tr>
     <tr>
-      <td><input type="checkbox"></td>
-      <td><input type="checkbox"></td>
-      <td><input type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
       <td>A</td>
     </tr>
     <tr>
-      <td><input type="checkbox"></td>
-      <td><input type="checkbox"></td>
-      <td><input type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
       <td>B</td>
     </tr>
     <tr>
-      <td><input type="checkbox"></td>
-      <td><input type="checkbox"></td>
-      <td><input type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
+      <td><input data-test-id="movie-seat" type="checkbox"></td>
       <td>C</td>
     </tr>
   </table>

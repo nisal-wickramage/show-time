@@ -9,7 +9,7 @@
       <p>Trailer</p>
     </span>
     <button>Reserve Seats</button>
-    <router-link to="/reserve/1">Reserve Seats</router-link>
+    <router-link data-test-id="movie-link" to="/reserve/1">Reserve Seats</router-link>
   </div>
 </template>
 

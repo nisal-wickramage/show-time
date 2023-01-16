@@ -2,7 +2,7 @@
 <h1>Ticket Reservation</h1>
   <SelectShow></SelectShow>
   <SelectSeat></SelectSeat>
-  <router-link to="/reserve/payment">Pay and Reserve</router-link>
+  <router-link data-test-id="movie-payment-link" to="/reserve/payment">Pay and Reserve</router-link>
 </template>
 
 <script lang="ts">
