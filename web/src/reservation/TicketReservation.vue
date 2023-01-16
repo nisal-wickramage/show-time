@@ -5,7 +5,7 @@
   <router-link to="/reserve/payment">Pay and Reserve</router-link>
 </template>
 
-<script>
+<script lang="ts">
 import SelectShow from "@/reservation/SelectShow.vue";
 import SelectSeat from "@/reservation/SelectSeat.vue";
 

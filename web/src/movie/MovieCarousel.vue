@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import MovieCard from "@/movie/MovieCard.vue";
 </script>
 
@@ -7,7 +7,7 @@ import MovieCard from "@/movie/MovieCard.vue";
   <MovieCard></MovieCard>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "MovieCarousel"
 }

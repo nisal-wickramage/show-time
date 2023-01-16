@@ -14,7 +14,7 @@ CVV Number <input type="text"/>
   <router-link to="/reserve/confirmation">Pay</router-link>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "PaymentInformation"
 }
